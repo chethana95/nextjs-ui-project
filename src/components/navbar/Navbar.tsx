@@ -1,14 +1,14 @@
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
-import Button from "./Button"
+import Button from "../buttons/Button"
 
 
 const Navbar = () => {
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">
-      <Link href={'/'}>
-        <Image src={'/hilink-logo.svg'} alt="logo" width={74} height={29} />
+      <Link href='/'>
+        <Image src='/hilink-logo.svg' alt="logo" width={74} height={29} />
       </Link>
       <ul className="hidden h-full gap-12 lg:flex">
         {NAV_LINKS.map((link) => (
@@ -26,7 +26,7 @@ const Navbar = () => {
         />
       </div>
       <Image
-        src={'menu.svg'}
+        src='menu.svg'
         alt="menu"
         width={32}
         height={32}
