@@ -1,29 +1,22 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
-import './globals.css'
-import Navbar from '@/components/navbar/Navbar'
-import Footer from '@/components/footer/Footer'
-
+import './globals.css';
+import Navbar from '@/components/navbar/Navbar';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
-  title: 'Travel',
-  description: 'Travel UI/UX App for Camping',
-}
+    title: 'Travel',
+    description: 'Travel UI/UX App for Camping',
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <main className='relative overflow-hidden'>
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
-  )
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+    return (
+        <html lang="en">
+            <body>
+                <Navbar />
+                <main className="relative overflow-hidden">{children}</main>
+                <Footer />
+            </body>
+        </html>
+    );
 }
